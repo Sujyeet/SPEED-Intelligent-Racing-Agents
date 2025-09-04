@@ -4,7 +4,7 @@
 
 ### Research Objective
 
-This project investigates the development and evaluation of intelligent racing agents using Deep Reinforcement Learning (DRL) within the Unity ML-Agents framework. The primary research question explores how different agent architectures—heuristic, deep reinforcement learning, and human control—perform in autonomous racing scenarios, with emphasis on both performance metrics and human-like behavioral characteristics.
+This project investigates the development and evaluation of intelligent racing agents using Deep Reinforcement Learning (DRL) within the Unity ML-Agents framework. The primary research question explores how different agent architectures like heuristic, deep reinforcement learning, and human control perform in autonomous racing scenarios, with emphasis on both performance metrics and human-like behavioral characteristics.
 
 ### Key Research Questions
 
