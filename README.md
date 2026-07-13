@@ -1,4 +1,4 @@
-# SPEED — Smart Player Engaging Environment using Deep Reinforcement Learning
+# SPEED - Smart Player Engaging Environment using Deep Reinforcement Learning
 
 SPEED is a research-focused autonomous racing project that compares classical AI with modern Deep Reinforcement Learning (DRL) in Unity. The repository implements and benchmarks two distinct approaches: a deterministic waypoint-based controller and a DRL agent trained using Unity ML-Agents with the PPO algorithm.
 
