@@ -1,5 +1,8 @@
-# SPEED-Intelligent-Racing-Agents
-This repository documents the design, implementation, ablation, and rigorous benchmarking of two distinct AI approaches for autonomous racing in Unity: a deterministic waypoint-based heuristic controller and a deep reinforcement learning (DRL) agent built with Unity ML-Agents (PPO). The work provides an academically robust framework for comparing classical and modern approaches emphasizing reproducibility, open science, and in-depth technical documentation for research.
+# SPEED — Smart Player Engaging Environment using Deep Reinforcement Learning
+
+SPEED is a research-focused autonomous racing project that compares classical AI with modern Deep Reinforcement Learning (DRL) in Unity. The repository implements and benchmarks two distinct approaches: a deterministic waypoint-based controller and a DRL agent trained using Unity ML-Agents with the PPO algorithm.
+
+Designed with reproducibility and open science in mind, SPEED provides comprehensive documentation, rigorous benchmarking, and systematic evaluation to highlight the strengths and trade-offs of rule-based and learning-based autonomous driving techniques.
 
 ## Playtest Prototype
 Try the interactive playtest prototype on Itch.io:  **[Play SPEED Racing Agents Demo](https://sujitvarma.itch.io/ml-agent-playtest-prototype)**
