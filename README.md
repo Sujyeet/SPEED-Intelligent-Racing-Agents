@@ -112,7 +112,7 @@ pip install -r requirements.txt
 • **Generalization**: Evaluations on alternate tracks for out-of-distribution robustness
 • **Result**: Simpler reward and lightweight networks consistently improved DRL reliability. See main paper for summary tables (e.g., Table IV, Table V) and cumulative reward learning curves.
 
-### Performance Metrics (example table)
+### Performance Metrics 
 | Agent | Mean Lap Time (s) | Std Dev | Collision Rate | Human-Likeness |
 |-------|-------------------|---------|----------------|-----------------|
 | Heuristic Agent | 41.5 | 2.0 | 0% | Low |
@@ -122,7 +122,7 @@ pip install -r requirements.txt
 
 ### Behavioral Analysis
 Beyond speed, the work quantifies "natural" behavior:
-• **Path deviation and steering variance**—plotted time series show DRL agents closely track human smoothness, unlike the mechanical, deterministic baseline
+• **Path deviation and steering variance**: Plotted time series show DRL agents closely track human smoothness, unlike the mechanical, deterministic baseline
 • **Error and recovery**: Analysis of wall-collisions and recovery strategies
 • **Comprehensive logging**: All logs available for reproduction in `Results-and-Analysis/`
 
