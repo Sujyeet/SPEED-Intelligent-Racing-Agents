@@ -18,6 +18,14 @@ Documents all bug fixes, runtime crashes, and performance/engine issues:
 - **Resolution Strategy**: Code and system changes made to permanently eliminate the root cause without symptom-patching.
 - **Verification Method**: Empirical runtime proof (Unity console logs, playtest verification) confirming resolution.
 
+### 3. `GAME_DEVELOPMENT_BLUEPRINT.md` (Living Production Master Plan)
+Whenever the user proposes a new game idea, mechanic, feature, or improvement, the agent MUST automatically update `GAME_DEVELOPMENT_BLUEPRINT.md` in the project root:
+- **Feature Title & Description**: Overview of proposed mechanic.
+- **Suggested Phase**: Phase placement (Phase 1 through Phase 5).
+- **Technical Design**: Class structure, code snippets, or system architecture.
+- **Potential Issues & Mitigation**: Expected technical risks and prevention strategy.
+- **Trade-off Analysis**: Why this design was selected over alternative implementations.
+
 ---
 *Tone & Formatting Requirements:*
 - No emojis, no long dashes, no AI fluff or filler words.
