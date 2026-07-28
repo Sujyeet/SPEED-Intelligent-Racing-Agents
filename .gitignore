@@ -8,11 +8,12 @@
 /[U|u]ser[S|s]ettings/
 /[M|m]emoryCaptures/
 
-# Python Virtual Environments & Cache
+# Python Virtual Environments & ML Checkpoints
 venv/
 .venv/
 __pycache__/
 *.pyc
+Checkpoints/
 
 # Visual Studio / VS Code auto-generated
 .vs/
