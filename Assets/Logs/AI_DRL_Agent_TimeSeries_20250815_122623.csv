@@ -1,0 +1,4 @@
+Time,PosX,PosY,PosZ,VelX,VelY,VelZ,Speed,SteeringAngle,Acceleration,PathDeviation,Phase,CheckpointID
+0.100,3.631,0.623,230.964,-0.236,-0.578,1.277,1.421,45.000,18.929,1.861,driving,-1
+0.220,3.569,0.599,231.211,-0.726,-0.002,3.184,3.266,0.000,15.375,1.758,driving,-1
+0.340,3.505,0.607,231.678,-0.413,0.072,4.964,4.981,0.000,14.440,1.707,driving,-1

@@ -1,0 +1,110 @@
+{
+    "ArcadeDriver": {
+        "checkpoints": [
+            {
+                "steps": 124974,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-124974.onnx",
+                "reward": -7.960654384666873,
+                "creation_time": 1752196229.965238,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-124974.pt"
+                ]
+            },
+            {
+                "steps": 149992,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-149992.onnx",
+                "reward": -10.471273893993613,
+                "creation_time": 1752196624.400633,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-149992.pt"
+                ]
+            },
+            {
+                "steps": 174949,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-174949.onnx",
+                "reward": -2.8274595017234483,
+                "creation_time": 1752197102.3729348,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-174949.pt"
+                ]
+            },
+            {
+                "steps": 199997,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-199997.onnx",
+                "reward": -9.198923943163473,
+                "creation_time": 1752197566.9212348,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-199997.pt"
+                ]
+            },
+            {
+                "steps": 224942,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-224942.onnx",
+                "reward": -6.616011604301287,
+                "creation_time": 1752198008.787258,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-224942.pt"
+                ]
+            },
+            {
+                "steps": 249964,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-249964.onnx",
+                "reward": -5.736668347332039,
+                "creation_time": 1752198531.694153,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-249964.pt"
+                ]
+            },
+            {
+                "steps": 274999,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-274999.onnx",
+                "reward": -3.6941182491955935,
+                "creation_time": 1752199101.6372685,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-274999.pt"
+                ]
+            },
+            {
+                "steps": 299984,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-299984.onnx",
+                "reward": -2.802868260213962,
+                "creation_time": 1752199599.5768814,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-299984.pt"
+                ]
+            },
+            {
+                "steps": 305519,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-305519.onnx",
+                "reward": -3.799983850296806,
+                "creation_time": 1752199719.9745867,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-305519.pt"
+                ]
+            },
+            {
+                "steps": 305881,
+                "file_path": "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-305881.onnx",
+                "reward": -1.4237386400883014,
+                "creation_time": 1752246776.4253778,
+                "auxillary_file_paths": [
+                    "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-305881.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 305881,
+            "file_path": "results\\complex_track_obstacles\\ArcadeDriver.onnx",
+            "reward": -1.4237386400883014,
+            "creation_time": 1752246776.4253778,
+            "auxillary_file_paths": [
+                "results\\complex_track_obstacles\\ArcadeDriver\\ArcadeDriver-305881.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.7.0+cu118"
+    }
+}

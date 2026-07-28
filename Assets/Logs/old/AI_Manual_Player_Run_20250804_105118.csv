@@ -1,0 +1,17 @@
+Metric,Value
+Agent Type,Manual_Player
+Completion Time (s),48.465
+Collision Count,0
+Distance Traveled (m),835.258
+Average Speed (m/s),12.49579
+Maximum Speed (m/s),15.13914
+Minimum Speed (m/s),0.00000
+Speed Standard Deviation,3.939685
+Speed Consistency,0.6847189
+Average Steering Angle (deg),15.7410700
+Maximum Steering Angle (deg),45.00000
+Steering Smoothness,0.9125496
+Average Acceleration (m/s²),15.8364
+Maximum Acceleration (m/s²),257.889
+Average Path Deviation (m),4.962
+Maximum Path Deviation (m),14.812

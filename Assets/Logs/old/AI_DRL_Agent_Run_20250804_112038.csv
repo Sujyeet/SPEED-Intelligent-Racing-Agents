@@ -1,0 +1,17 @@
+Metric,Value
+Agent Type,DRL_Agent
+Completion Time (s),4.644
+Collision Count,0
+Distance Traveled (m),0.103
+Average Speed (m/s),0.01804
+Maximum Speed (m/s),0.58076
+Minimum Speed (m/s),0.00000
+Speed Standard Deviation,0.094571
+Speed Consistency,-4.2427160
+Average Steering Angle (deg),0.0000000
+Maximum Steering Angle (deg),0.00000
+Steering Smoothness,1.0000000
+Average Acceleration (m/s²),0.2580
+Maximum Acceleration (m/s²),6.039
+Average Path Deviation (m),1.877
+Maximum Path Deviation (m),1.878

@@ -1,0 +1,112 @@
+Metric,Value
+Agent Type,DRL_Agent
+Completion Time (s),164.065
+Collision Count,1
+Distance Traveled (m),1756.392
+Average Speed (m/s),10.73911
+Maximum Speed (m/s),15.00253
+Minimum Speed (m/s),0.02445
+Speed Standard Deviation,4.847152
+Speed Consistency,0.5486449
+Average Steering Angle (deg),26.5178500
+Maximum Steering Angle (deg),45.00000
+Steering Smoothness,0.8526786
+Average Acceleration (m/s²),20.7124
+Maximum Acceleration (m/s²),389.046
+Average Path Deviation (m),0.000
+Maximum Path Deviation (m),0.000
+
+Lap Data
+Lap,StartTime,EndTime,LapTime,AvgSpeed,MaxSpeed,MinSpeed,AvgSteering,MaxSteering,AvgAccel,MaxAccel,PathDeviation,Collisions,Efficiency
+1,0.000,70.640,70.640,9.432,15.003,0.024,30.781,45.000,22.834,389.046,0.000,1,1.000
+2,70.640,116.540,45.900,13.102,14.972,5.300,21.116,45.000,18.727,247.319,0.000,0,1.000
+
+Lap Summary
+Metric,Value
+Total Laps,2
+Best Lap Time,45.900
+Worst Lap Time,70.640
+Average Lap Time,58.270
+Lap Time Consistency,0.700
+Time Efficiency,0.9968656
+
+Checkpoint Data
+CheckpointID,SegmentName,IsStart,IsEnd,SegmentTime,Timestamp,Speed
+1,Checkpoint_1,False,False,0.000,4.540,14.399
+2,Checkpoint_2,False,False,0.000,20.740,11.988
+3,Checkpoint_3,False,False,0.000,23.640,10.239
+4,Checkpoint_4,False,False,0.000,32.640,14.288
+5,Checkpoint_5,False,False,0.000,33.800,12.956
+6,Checkpoint_6,False,False,0.000,38.080,9.440
+7,Checkpoint_7,False,False,0.000,39.000,13.988
+8,Checkpoint_8,False,False,0.000,40.040,14.669
+9,Checkpoint_9,False,False,0.000,41.540,14.796
+10,Checkpoint_10,False,False,0.000,43.840,11.913
+11,Checkpoint_11,False,False,0.000,45.300,12.791
+12,Checkpoint_12,False,False,0.000,45.920,14.920
+13,Checkpoint_13,False,False,0.000,47.120,10.393
+14,Checkpoint_14,False,False,0.000,48.820,7.981
+15,Checkpoint_15,False,False,0.000,50.520,14.371
+16,Checkpoint_16,False,False,0.000,51.860,14.731
+17,Checkpoint_17,False,False,0.000,53.580,14.704
+18,Checkpoint_18,False,False,0.000,55.140,12.377
+19,Checkpoint_19,False,False,0.000,56.800,14.446
+20,Checkpoint_20,False,False,0.000,58.240,14.459
+21,Checkpoint_21,False,False,0.000,59.740,10.663
+22,Checkpoint_22,False,False,0.000,62.060,12.072
+23,Checkpoint_23,False,False,0.000,63.500,14.712
+24,Checkpoint_24,False,False,0.000,64.620,14.851
+25,Checkpoint_25,False,False,0.000,65.880,12.479
+26,Checkpoint_26,False,False,0.000,67.580,13.901
+27,Checkpoint_27,False,False,0.000,68.520,14.455
+0,Checkpoint_0,True,True,0.000,70.640,14.886
+1,Checkpoint_1,False,False,0.000,73.400,14.820
+2,Checkpoint_2,False,False,0.000,77.140,14.184
+3,Checkpoint_3,False,False,0.000,78.540,14.874
+4,Checkpoint_4,False,False,0.000,80.520,13.882
+5,Checkpoint_5,False,False,0.000,81.560,12.762
+6,Checkpoint_6,False,False,0.000,85.300,9.202
+7,Checkpoint_7,False,False,0.000,86.220,14.394
+8,Checkpoint_8,False,False,0.000,87.200,14.753
+9,Checkpoint_9,False,False,0.000,89.020,13.860
+10,Checkpoint_10,False,False,0.000,90.920,11.959
+11,Checkpoint_11,False,False,0.000,91.740,12.846
+12,Checkpoint_12,False,False,0.000,92.440,14.737
+13,Checkpoint_13,False,False,0.000,93.200,14.539
+14,Checkpoint_14,False,False,0.000,94.560,9.726
+15,Checkpoint_15,False,False,0.000,96.100,14.677
+16,Checkpoint_16,False,False,0.000,97.340,14.812
+17,Checkpoint_17,False,False,0.000,98.900,14.835
+18,Checkpoint_18,False,False,0.000,100.160,14.884
+19,Checkpoint_19,False,False,0.000,101.600,14.866
+20,Checkpoint_20,False,False,0.000,102.920,14.725
+21,Checkpoint_21,False,False,0.000,104.460,11.393
+22,Checkpoint_22,False,False,0.000,106.640,12.117
+23,Checkpoint_23,False,False,0.000,108.200,14.266
+24,Checkpoint_24,False,False,0.000,109.660,13.532
+25,Checkpoint_25,False,False,0.000,111.840,11.379
+26,Checkpoint_26,False,False,0.000,113.580,13.915
+27,Checkpoint_27,False,False,0.000,114.480,14.594
+0,Checkpoint_0,True,True,0.000,116.540,14.881
+1,Checkpoint_1,False,False,0.000,119.340,14.823
+2,Checkpoint_2,False,False,0.000,123.020,12.345
+3,Checkpoint_3,False,False,0.000,124.500,14.844
+4,Checkpoint_4,False,False,0.000,126.400,14.883
+5,Checkpoint_5,False,False,0.000,127.400,13.595
+6,Checkpoint_6,False,False,0.000,131.220,8.828
+7,Checkpoint_7,False,False,0.000,132.160,14.254
+8,Checkpoint_8,False,False,0.000,133.120,14.733
+9,Checkpoint_9,False,False,0.000,134.500,14.848
+10,Checkpoint_10,False,False,0.000,136.740,9.061
+11,Checkpoint_11,False,False,0.000,137.860,9.740
+12,Checkpoint_12,False,False,0.000,138.600,14.093
+13,Checkpoint_13,False,False,0.000,147.620,2.832
+14,Checkpoint_14,False,False,0.000,149.720,8.826
+15,Checkpoint_15,False,False,0.000,153.000,12.874
+16,Checkpoint_16,False,False,0.000,154.320,14.682
+17,Checkpoint_17,False,False,0.000,155.880,14.865
+18,Checkpoint_18,False,False,0.000,157.240,14.468
+19,Checkpoint_19,False,False,0.000,158.740,14.883
+20,Checkpoint_20,False,False,0.000,160.120,14.657
+21,Checkpoint_21,False,False,0.000,161.640,11.500
+22,Checkpoint_22,False,False,0.000,164.040,12.430

@@ -1,0 +1,54 @@
+Metric,Value
+Agent Type,DRL_Agent
+Completion Time (s),51.858
+Collision Count,0
+Distance Traveled (m),693.256
+Average Speed (m/s),13.52433
+Maximum Speed (m/s),15.00000
+Minimum Speed (m/s),1.42147
+Speed Standard Deviation,2.282472
+Speed Consistency,0.8312321
+Average Steering Angle (deg),16.3541700
+Maximum Steering Angle (deg),45.00000
+Steering Smoothness,0.9091435
+Average Acceleration (m/s²),15.9854
+Maximum Acceleration (m/s²),324.175
+Average Path Deviation (m),5.084
+Maximum Path Deviation (m),15.491
+
+Lap Data
+Lap,StartTime,EndTime,LapTime,AvgSpeed,MaxSpeed,MinSpeed,AvgSteering,MaxSteering,AvgAccel,MaxAccel,PathDeviation,Collisions,Efficiency
+1,0.000,44.320,44.320,13.433,15.000,1.421,16.707,45.000,16.070,324.175,1926.510,0,-2.274
+
+Checkpoint Data
+CheckpointID,SegmentName,IsStart,IsEnd,SegmentTime,Timestamp,Speed
+1,Checkpoint_1,False,False,0.000,3.640,14.885
+2,Checkpoint_2,False,False,0.000,7.160,14.568
+3,Checkpoint_3,False,False,0.000,8.620,14.815
+4,Checkpoint_4,False,False,0.000,10.560,14.887
+5,Checkpoint_5,False,False,0.000,11.520,13.672
+6,Checkpoint_6,False,False,0.000,15.240,9.029
+7,Checkpoint_7,False,False,0.000,16.160,14.235
+8,Checkpoint_8,False,False,0.000,17.200,14.679
+9,Checkpoint_9,False,False,0.000,18.560,14.885
+10,Checkpoint_10,False,False,0.000,20.520,11.515
+11,Checkpoint_11,False,False,0.000,21.300,12.707
+12,Checkpoint_12,False,False,0.000,21.980,14.636
+13,Checkpoint_13,False,False,0.000,22.760,14.471
+14,Checkpoint_14,False,False,0.000,24.100,9.604
+15,Checkpoint_15,False,False,0.000,25.720,14.725
+16,Checkpoint_16,False,False,0.000,26.960,14.852
+17,Checkpoint_17,False,False,0.000,28.500,14.759
+18,Checkpoint_18,False,False,0.000,29.740,14.722
+19,Checkpoint_19,False,False,0.000,31.160,14.884
+20,Checkpoint_20,False,False,0.000,32.520,14.834
+21,Checkpoint_21,False,False,0.000,33.880,9.919
+22,Checkpoint_22,False,False,0.000,36.140,12.122
+23,Checkpoint_23,False,False,0.000,37.440,14.831
+24,Checkpoint_24,False,False,0.000,38.540,14.720
+25,Checkpoint_25,False,False,0.000,39.800,12.787
+26,Checkpoint_26,False,False,0.000,41.380,13.931
+27,Checkpoint_27,False,False,0.000,42.260,14.742
+0,Checkpoint_0,True,True,0.000,44.320,14.886
+1,Checkpoint_1,False,False,0.000,47.080,14.885
+2,Checkpoint_2,False,False,0.000,50.740,14.452

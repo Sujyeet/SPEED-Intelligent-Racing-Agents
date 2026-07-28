@@ -1,0 +1,8 @@
+<linker>
+  <assembly fullname="Unity.Barracuda">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="Unity.MLAgents">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+</linker>

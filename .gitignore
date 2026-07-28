@@ -1,0 +1,37 @@
+# Unity auto-generated / temporary folders
+/[L|l]ibrary/
+/[T|t]emp/
+/[O|o]bj/
+/[B|b]uild/
+/[B|b]uilds/
+/[L|l]ogs/
+/[U|u]ser[S|s]ettings/
+/[M|m]emoryCaptures/
+
+# Python Virtual Environments & Cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Visual Studio / VS Code auto-generated
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,21 @@
+Metric,Value
+Agent Type,DRL_Agent
+Completion Time (s),6.104
+Collision Count,0
+Distance Traveled (m),77.063
+Average Speed (m/s),12.85630
+Maximum Speed (m/s),15.00000
+Minimum Speed (m/s),1.42147
+Speed Standard Deviation,3.228326
+Speed Consistency,0.7488916
+Average Steering Angle (deg),10.5882300
+Maximum Steering Angle (deg),45.00000
+Steering Smoothness,0.9411765
+Average Acceleration (m/s²),15.5345
+Maximum Acceleration (m/s²),246.536
+Average Path Deviation (m),4.679
+Maximum Path Deviation (m),15.978
+
+Checkpoint Data
+CheckpointID,SegmentName,IsStart,IsEnd,SegmentTime,Timestamp,Speed
+1,Checkpoint_1,False,False,0.000,3.680,14.638
