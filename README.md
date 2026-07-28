@@ -1,6 +1,11 @@
-# Krash Kart
+# Krash Kart — Development Log & Prototype
 
-Krash Kart is a hybrid multiplayer and machine learning kart racing game built in Unity 2022.3. It combines real-time peer-to-peer networking via Unity Netcode for GameObjects and Unity Relay with autonomous AI opponents trained using Unity ML-Agents.
+This repository contains the prototype codebase and development log for Krash Kart, an active Unity 2022.3 kart racing project. It demonstrates real-time peer-to-peer multiplayer via Unity Netcode for GameObjects and Unity Relay, alongside autonomous AI opponents trained using Unity ML-Agents.
+
+## Project Status
+
+* Stage: Active Development Prototype
+* Focus: Multiplayer Networking, ML-Agent AI, and Physics Integration
 
 ## Key Features
 
@@ -17,26 +22,19 @@ Krash Kart is a hybrid multiplayer and machine learning kart racing game built i
 * AI Framework: Unity ML-Agents v2.0.1 (Barracuda inference runtime)
 * Physics: Custom raycast Arcade Kart physics model
 
-## Setup and Running
+## Setup and Local Testing
 
-1. Clone the repository to your local machine:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/username/krash-kart.git
+   git clone https://github.com/username/krash-kart-devlog.git
    ```
 2. Open Unity Hub and add the project using Unity 2022.3.62f2.
 3. Open `Assets/Karting/Scenes/IntroMenu.unity` or `MainScene.unity`.
 4. Press Play in the Unity Editor to start local testing or host a multiplayer session.
 
-## Project Structure
+## Documentation and Dev Log
 
-* `Assets/Karting/Scripts/AI`: ML-Agent driver implementations and training adapters.
-* `Assets/Karting/Scripts/Multiplayer`: Netcode synchronization, Relay connection managers, and networked kart controllers.
-* `Assets/Karting/Scripts/GameModes`: Checkpoint logic, lap objects, and race objective handlers.
-* `Assets/Karting/Scripts/KartSystems`: Physics controllers, steering, and wheel animation logic.
-
-## Documentation
-
-A complete technical breakdown of architectural decisions, bug fixes, and development notes is available in [PROTOTYPE_DOCUMENTATION.md](PROTOTYPE_DOCUMENTATION.md).
+For complete technical notes, architectural breakdown, and issue resolution history, refer to [PROTOTYPE_DOCUMENTATION.md](PROTOTYPE_DOCUMENTATION.md).
 
 ## License
 
