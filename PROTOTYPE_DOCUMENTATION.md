@@ -1,77 +1,51 @@
-# Krash Kart — Prototype Handover Documentation
+# Krash Kart Technical Documentation
 
----
+## 1. Overview
 
-## 1. Project Overview & Scope
+* Project Name: Krash Kart
+* Unity Version: 2022.3.62f2
+* Core Systems: Unity Netcode for GameObjects, Unity Relay, Unity ML-Agents v2.0.1, Arcade Kart Physics
 
-- **Project Name:** Krash Kart (ML & Multiplayer Kart Racing Prototype)
-- **Unity Version:** 2022.3.62f2
-- **Key Frameworks & Tech Stack:**
-  - **Netcode for GameObjects (NGO):** Networked multiplayer kart movement & state synchronization.
-  - **Unity Gaming Services (Relay & Authentication):** Peer-to-peer multiplayer lobby connections over Relay.
-  - **Unity ML-Agents (v2.0.1):** AI-controlled bot karts capable of single-player & multiplayer racing.
-  - **Arcade Kart Physics:** Customized Microgame physics model.
+## 2. System Changes and Fixes
 
----
+### Race Management and Scene Transitions
+* 3-Lap Winning Condition: Connected `LapObject.cs`, `ObjectiveCompleteLaps.cs`, `MultiplayerRaceManager.cs`, `KartAgent.cs`, and `GameFlowManager.cs`. Completing three laps triggers `GameFlowManager.EndGame(true)` and loads `WinScene.unity`.
+* Start Line Trigger Resolution: Refactored `LapObject.cs` trigger detection to resolve karts using `GetComponentInParent<ArcadeKart>()`.
+* Spawn Guard: Added a 1.5-second timer guard (`Time.timeSinceLevelLoad < 1.5f`) in `LapObject.cs` to prevent karts positioned behind the line from triggering lap counts during race countdown.
+* Event Invocation Safety: Updated `Objective.cs` to use null-conditional operators (`?.Invoke()`) for `TimeDisplay` events to prevent `NullReferenceException` crashes when UI objects are missing.
+* Objective Manager Guards: Added null checks for `m_ObjectiveHUDManger` and `m_NotificationHUDManager` in `Objective.cs` during registration and completion.
 
-## 2. Comprehensive Log of Technical Changes & System Upgrades
+### Kart Physics and Animation
+* Idle Steering Adjustment: Scaled steering torque relative to kart velocity in `ArcadeKart.cs` to prevent karts from turning on the spot when idle.
+* Kinematic Velocity Warnings: Guarded `Rigidbody.velocity` and `Rigidbody.angularVelocity` writes with `if (!Rigidbody.isKinematic)` checks in `ArcadeKart.cs` and `MultiplayerRaceManager.cs`.
+* Wheel Mesh Flip Support: Added an X-axis scale flip (`flipX`) in `KartAnimation.cs` and `KartAnimationNetworked.cs` to render single-sided mesh geometry correctly on right-side wheels.
+* Wheel Animation Null Checks: Added null validation in `KartAnimation.cs` for wheel transforms, wheel colliders, and input struct references.
 
-### A. Race Loop, Winning Conditions & Scene Flow
-- **3-Lap Race Winning Logic:** Integrated 3-lap race completion with `LapObject.cs`, `ObjectiveCompleteLaps.cs`, `MultiplayerRaceManager.cs`, `KartAgent.cs`, and `GameFlowManager.cs`. Completing 3 laps in Single Player or Multiplayer mode triggers `GameFlowManager.EndGame(true)` and smoothly transitions to `WinScene.unity`.
-- **Start/Finish Line Trigger Robustness (`LapObject.cs`):** Updated `OnTriggerEnter` to resolve player and AI karts using `other.GetComponentInParent<ArcadeKart>()`.
-- **Spawn-Time Trigger Filtering:** Implemented a `Time.timeSinceLevelLoad < 1.5f` filter in `LapObject.cs` to prevent karts spawning behind the start line from prematurely triggering lap counts during race countdown.
-- **Null Safety in Event Invocations (`Objective.cs`):** Replaced direct calls to `TimeDisplay.OnUpdateLap()` and `TimeDisplay.OnSetLaps()` with safe null-conditional invocations (`?.Invoke()`) to eliminate `NullReferenceException` crashes when UI elements are missing.
-- **HUD Manager Guards (`Objective.cs`):** Added null checks for `m_ObjectiveHUDManger` and `m_NotificationHUDManager` during `Register` and `CompleteObjective` so game completion succeeds even if HUD elements are disabled.
+### Items and Spells
+* Projectile Trajectory: Adjusted default launch angle and exposed pitch, forward, and upward offsets in `ProjectileSpell.cs` for inspector tuning.
+* Mine Visibility: Removed `GoInvisible()` coroutine from `TrapMine.cs` so mines remain visible to all players.
+* VFX Lifecycle: Added explicit destruction timers (`Destroy(vfx, 2f)`) for spell and mine particle prefabs.
 
-### B. Physics & Kart Movement Enhancements
-- **Idle Steering Glitch Fix (`ArcadeKart.cs`):** Scaled steering power dynamically with kart velocity to prevent the kart body from turning on the spot while stationary.
-- **Kinematic Velocity Warning Cleanup:** Guarded `Rigidbody.velocity` and `Rigidbody.angularVelocity` writes with `if (!Rigidbody.isKinematic)` checks in `ArcadeKart.cs` and `MultiplayerRaceManager.cs` to eliminate Unity kinematic warning spam.
-- **Single-Sided Wheel Geometry Fix (Stylized Car Asset Pack):** Replaced Y-rotation offsets with X-axis scale mirroring (`localScale.x = -Mathf.Abs(s.x)` via `flipX` toggle in `KartAnimation.cs` and `KartAnimationNetworked.cs`), eliminating backface rendering (black wheels) on right-side wheels.
-- **Null-Safe Wheel Animations (`KartAnimation.cs`):** Added comprehensive null guards for wheel transforms, wheel colliders, and `InputData` struct handling.
+### Architecture and Networking
+* Assembly Reference Decoupling: Added `GameModeManager.OnAgentFinishedRace` event delegate in `KartGame.GameFlow` namespace. This allows `KartAgent.cs` (`KartGame.AI.asmdef`) to notify race completion without directly referencing `MultiplayerRaceManager` or `Unity.Netcode.Runtime`.
+* Netcode Spawn Verification: Updated `LapObject.cs` ownership checks to `if (netObj != null && netObj.IsSpawned && !netObj.IsOwner)` to support local unspawned test karts.
+* Authentication Guard: Added `if (!AuthenticationService.Instance.IsSignedIn)` in `RelayManager.cs` to prevent authentication exceptions on scene reload.
+* DisplayMessage Safety: Updated `DisplayMessage.cs` to verify `activeInHierarchy` before starting coroutines.
 
-### C. Gameplay Spells & VFX Optimization
-- **Projectile Launch Arc (`ProjectileSpell.cs` & `SpellProjectile.cs`):** Elevated default launch pitch and exposed `upwardPitch`, `forwardOffset`, and `upwardOffset` in the Inspector for real-time tuning.
-- **Permanent Mine Visibility (`TrapMine.cs`):** Removed the `GoInvisible()` coroutine so trap mines remain permanently visible to all players.
-- **VFX Hierarchy Cleanup:** Added automatic 2-second destruction (`Destroy(vfx, 2f)`) for spell projectile impacts and mine explosion particle clones to keep the hierarchy clean.
+## 3. Issues and Resolutions Summary
 
-### D. Networking, Architecture & Assembly Definition Decoupling
-- **Assembly Reference Decoupling (`GameModeManager.cs`):** Added static event delegate `GameModeManager.OnAgentFinishedRace` in `KartGame.GameFlow` namespace. This allowed `KartAgent.cs` (`KartGame.AI.asmdef`) to notify race completion without directly referencing `MultiplayerRaceManager` or `Unity.Netcode.Runtime` (`CS0012` assembly error fix).
-- **Netcode IsSpawned Guard (`LapObject.cs`):** Updated ownership check to `if (netObj != null && netObj.IsSpawned && !netObj.IsOwner)`, enabling local unspawned karts to trigger lap counts in single-player test mode.
-- **Relay Re-authentication Guard (`RelayManager.cs`):** Guarded `SignInAnonymouslyAsync()` with `if (!AuthenticationService.Instance.IsSignedIn)` to prevent authentication errors on scene reload.
-- **DisplayMessage Coroutine Safety (`DisplayMessage.cs`):** Ensured GameObjects are active (`gameObject.SetActive(true)`) before starting UI coroutines.
-
----
-
-## 3. Problems Faced & Solutions Summary
-
-| Problem / Issue | Root Cause | Solution Implemented |
+| Problem | Cause | Solution |
 | :--- | :--- | :--- |
-| **Kart Steer Glitch** | Full steering torque applied at zero velocity | Scaled steering power by speed ratio in `ArcadeKart.cs`. |
-| **Black Right Wheels** | Single-sided mesh geometry inverted by Y-180° rotation | Mirrored geometry along X-axis using `flipX` scale inversion (`-Mathf.Abs(x)`). |
-| **Assembly Compiler Errors (`CS0012`)** | `KartAgent.cs` referenced Netcode classes across `asmdef` boundaries | Added static event `GameModeManager.OnAgentFinishedRace` to bridge events without cross-assembly imports. |
-| **Trigger Failed on Single-Player** | `!netObj.IsOwner` evaluated to `true` when unspawned | Added `netObj.IsSpawned` check before filtering non-owned karts in `LapObject.cs`. |
-| **Premature Lap 1 at Spawn** | Karts spawned inside the start line trigger box | Added `Time.timeSinceLevelLoad < 1.5f` spawn guard in `LapObject.cs`. |
-| **Crash on Win Completion** | Direct `null` invocation of `TimeDisplay` and missing HUD managers | Replaced with safe `?.Invoke()` and added null guards in `Objective.cs`. |
+| Steering turned while stationary | Fixed torque applied regardless of speed | Scaled steering power by speed ratio in `ArcadeKart.cs`. |
+| Black wheels on right side | Single-sided mesh geometry inverted by Y-180 rotation | Applied X-axis scale mirroring (`-Mathf.Abs(x)`). |
+| Assembly compilation error CS0012 | `KartAgent.cs` referenced Netcode classes across assembly definition | Added static event `GameModeManager.OnAgentFinishedRace`. |
+| Lap trigger failed in single-player | `!netObj.IsOwner` evaluated to true when unspawned | Added `netObj.IsSpawned` check in `LapObject.cs`. |
+| Premature lap count at spawn | Karts spawned inside the start line trigger box | Added 1.5s level load time guard in `LapObject.cs`. |
+| Scene load crash on win | Null invocation of missing `TimeDisplay` and HUD managers | Added null-conditional checks in `Objective.cs`. |
 
----
+## 4. Next Updates
 
-## 4. Recommended Next Updates for Full Game Development
-
-1. **Multiplayer Netcode Polish:**
-   - Implement client-side prediction and server reconciliation for smooth gameplay under higher latency.
-   - Add lobby settings UI for lap count selection (e.g. 3, 5, 10 laps) and track selection.
-
-2. **AI & ML-Agent Training:**
-   - Update `KartAgent.cs` vector observation size (resolve warning for 13 observations vs 12 configured size).
-   - Retrain ML-Agent neural networks with spell pickup handling and obstacle avoidance.
-
-3. **UI / UX Polish & Clean-up:**
-   - Design a modern, custom game HUD (Lap counter, Speedometer, Placement Leaderboard).
-   - Clean up missing script references on `InGameMenu` and `KartClassic_Player` prefabs in Unity Inspector.
-
-4. **Audio & Asset Expansion:**
-   - Expand car visual selections using the Stylized Car asset pack.
-   - Add engine audio pitch shifting based on RPM/velocity and impact sound effects.
-
----
-*Generated automatically by Antigravity AI Assistant.*
+1. Implement client-side prediction and server reconciliation for player movement under higher latency.
+2. Update `KartAgent.cs` observation vector configuration and retrain ML-Agent models with obstacle avoidance.
+3. Design custom HUD elements for lap tracking and position leaderboards.
+4. Remove unused script references on `InGameMenu` and `KartClassic_Player` prefabs.

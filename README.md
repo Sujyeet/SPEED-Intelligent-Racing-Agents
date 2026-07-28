@@ -1,61 +1,43 @@
-# 🏎️ Krash Kart — ML & Multiplayer Kart Racing
+# Krash Kart
 
-![Unity](https://img.shields.io/badge/Unity-2022.3.62f2-blue.svg?logo=unity)
-![ML-Agents](https://img.shields.io/badge/ML--Agents-v2.0.1-green.svg)
-![Netcode](https://img.shields.io/badge/Netcode-NGO%20%2B%20Relay-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-purple.svg)
+Krash Kart is a hybrid multiplayer and machine learning kart racing game built in Unity 2022.3. It combines real-time peer-to-peer networking via Unity Netcode for GameObjects and Unity Relay with autonomous AI opponents trained using Unity ML-Agents.
 
-An action-packed hybrid **Multiplayer & Reinforcement Learning Kart Racing Game** built with Unity 2022.3, **Unity Netcode for GameObjects (NGO)**, **Unity Gaming Services (Relay)**, and **Unity ML-Agents**.
+## Key Features
 
----
+* Networked Multiplayer: Host and client matchmaking powered by Unity Relay and Unity Netcode for GameObjects.
+* Machine Learning AI: Autonomous bot karts trained with Proximal Policy Optimization (PPO) using Unity ML-Agents.
+* 3-Lap Race Loop: Complete race progression tracking checkpoints, lap triggers, and end-of-race victory state transitions.
+* Gameplay Items: Pickups including forward projectiles, visible proximity mines, and custom particle impact effects.
+* Custom Vehicle Support: Scaled animation adapters with X-axis mesh mirroring to support custom car models and single-sided mesh geometry.
 
-## ✨ Features
+## Tech Stack
 
-- **🌐 Networked Multiplayer:** Full peer-to-peer multiplayer powered by Unity Relay and Netcode for GameObjects.
-- **🤖 Reinforcement Learning AI:** Autonomous AI opponents trained using Unity ML-Agents (PPO algorithm).
-- **🏁 3-Lap Race Winning System:** Seamless race loop with checkpoint tracking, lap counting, and victory scene transitions.
-- **✨ Dynamic Gameplay Spells:** Throwable projectiles, permanent trap mines, and interactive power-ups with clean particle VFX.
-- **🚗 Custom Vehicle Rendering:** Dual-mode animation adapters supporting single-sided geometry scale mirroring for custom car assets.
+* Engine: Unity 2022.3.62f2
+* Networking: Unity Netcode for GameObjects, Unity Gaming Services Relay
+* AI Framework: Unity ML-Agents v2.0.1 (Barracuda inference runtime)
+* Physics: Custom raycast Arcade Kart physics model
 
----
+## Setup and Running
 
-## 🛠️ Tech Stack & Architecture
-
-- **Engine:** Unity 2022.3.62f2
-- **Networking:** Unity Netcode for GameObjects (NGO) + Unity Relay Services
-- **Machine Learning:** Unity ML-Agents Framework v2.0.1 (Barracuda Policy Inference)
-- **Physics:** Custom Arcade Kart Physics & Raycast Suspension
-- **UI & Flow:** Event-driven `GameModeManager` and decoupled assembly architecture (`KartGame.AI`, `KartGame.asmdef`).
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Unity Hub** with **Unity 2022.3.62f2** installed.
-- **Git** for version control.
-
-### Installation
-
-1. Clone the repository:
+1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
+   git clone https://github.com/username/krash-kart.git
    ```
-2. Open **Unity Hub** -> Click **Add** -> Select the cloned project folder.
-3. Open the project in **Unity 2022.3.62f2**.
-4. Open the main scene:
-   `Assets/Karting/Scenes/MainScene.unity` or `IntroMenu.unity`.
-5. Press **Play** in the Unity Editor or click **Host Game** to test multiplayer & AI racing!
+2. Open Unity Hub and add the project using Unity 2022.3.62f2.
+3. Open `Assets/Karting/Scenes/IntroMenu.unity` or `MainScene.unity`.
+4. Press Play in the Unity Editor to start local testing or host a multiplayer session.
 
----
+## Project Structure
 
-## 📄 Documentation
+* `Assets/Karting/Scripts/AI`: ML-Agent driver implementations and training adapters.
+* `Assets/Karting/Scripts/Multiplayer`: Netcode synchronization, Relay connection managers, and networked kart controllers.
+* `Assets/Karting/Scripts/GameModes`: Checkpoint logic, lap objects, and race objective handlers.
+* `Assets/Karting/Scripts/KartSystems`: Physics controllers, steering, and wheel animation logic.
 
-For full technical specifications, bug fix logs, and architectural breakdown, refer to [PROTOTYPE_DOCUMENTATION.md](PROTOTYPE_DOCUMENTATION.md).
+## Documentation
 
----
+A complete technical breakdown of architectural decisions, bug fixes, and development notes is available in [PROTOTYPE_DOCUMENTATION.md](PROTOTYPE_DOCUMENTATION.md).
 
-## 📜 License
+## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is licensed under the MIT License. See the LICENSE file for details.
