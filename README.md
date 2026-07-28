@@ -1,11 +1,11 @@
-# 🏎️ Unity ML-Agents & Netcode Kart Racing
+# 🏎️ Krash Kart — ML & Multiplayer Kart Racing
 
 ![Unity](https://img.shields.io/badge/Unity-2022.3.62f2-blue.svg?logo=unity)
 ![ML-Agents](https://img.shields.io/badge/ML--Agents-v2.0.1-green.svg)
 ![Netcode](https://img.shields.io/badge/Netcode-NGO%20%2B%20Relay-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-purple.svg)
 
-An advanced hybrid **Multiplayer & Reinforcement Learning Kart Racing Game** built with Unity 2022.3, **Unity Netcode for GameObjects (NGO)**, **Unity Gaming Services (Relay)**, and **Unity ML-Agents**.
+An action-packed hybrid **Multiplayer & Reinforcement Learning Kart Racing Game** built with Unity 2022.3, **Unity Netcode for GameObjects (NGO)**, **Unity Gaming Services (Relay)**, and **Unity ML-Agents**.
 
 ---
 

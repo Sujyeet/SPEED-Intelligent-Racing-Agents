@@ -1,10 +1,10 @@
-# Unity ML & Multiplayer Kart Racing - Prototype Handover Documentation
+# Krash Kart — Prototype Handover Documentation
 
 ---
 
 ## 1. Project Overview & Scope
 
-- **Project Name:** Unity ML & Multiplayer Kart Racing Prototype
+- **Project Name:** Krash Kart (ML & Multiplayer Kart Racing Prototype)
 - **Unity Version:** 2022.3.62f2
 - **Key Frameworks & Tech Stack:**
   - **Netcode for GameObjects (NGO):** Networked multiplayer kart movement & state synchronization.
