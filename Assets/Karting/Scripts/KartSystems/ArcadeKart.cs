@@ -593,8 +593,8 @@ void Start()
             {
                 Rigidbody.velocity = newVelocity;
             }
-
-          
+            
+            
             if (GroundPercent > 0.0f)
             {
                 if (m_InAir)
