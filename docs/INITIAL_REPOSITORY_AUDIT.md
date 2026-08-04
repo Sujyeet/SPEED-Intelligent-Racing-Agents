@@ -15,7 +15,7 @@
 
 ## 3. Git Remote Name and URL
 * **Remote Name**: `origin`
-* **Remote URL**: `https://github.com/Sujyeet/krash-kart-devlog.git`
+* **Remote URL**: `https://github.com/Sujyeet/SPEED-Intelligent-Racing-Agents.git`
 
 ## 4. Working Tree Status
 * **Working Tree Clean**: **NO (DIRTY)**

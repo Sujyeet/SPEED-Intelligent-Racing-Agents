@@ -26,7 +26,7 @@ This repository contains the prototype codebase and development log for RESEARCH
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/krash-kart-devlog.git
+   git clone https://github.com/Sujyeet/SPEED-Intelligent-Racing-Agents.git
    ```
 2. Open Unity Hub and add the project using Unity 2022.3.62f2.
 3. Open `Assets/Karting/Scenes/IntroMenu.unity` or `MainScene.unity`.
