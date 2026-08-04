@@ -1,4 +1,4 @@
-# Krash Kart — Agent Rules & Documentation Protocol
+# RESEARCH_ML — Agent Rules & Documentation Protocol
 
 ## Documentation Rules for Every Change
 

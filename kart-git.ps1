@@ -1,4 +1,4 @@
-# Krash Kart -- Git Control Center
+# RESEARCH_ML -- Git Control Center
 # Interactive terminal app. Run with: .\kart-git.ps1
 
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path

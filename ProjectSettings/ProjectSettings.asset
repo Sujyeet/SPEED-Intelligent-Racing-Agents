@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Krash Kart
+  productName: RESEARCH_ML
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -622,14 +622,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: ML TEST
+  metroPackageName: RESEARCH_ML
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: ML TEST
+  metroApplicationDescription: RESEARCH_ML
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -702,7 +702,7 @@ PlayerSettings:
   cloudProjectId: f58b6c77-dc4b-46f9-8a15-3cced833b6f4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ML TEST
+  projectName: RESEARCH_ML
   organizationId: sujyeeet
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

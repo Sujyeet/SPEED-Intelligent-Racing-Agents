@@ -1,8 +1,8 @@
-# Krash Kart Technical Documentation
+# RESEARCH_ML Technical Documentation
 
 ## 1. Overview
 
-* Project Name: Krash Kart
+* Project Name: RESEARCH_ML
 * Unity Version: 2022.3.62f2
 * Core Systems: Unity Netcode for GameObjects, Unity Relay, Unity ML-Agents v2.0.1, Arcade Kart Physics
 

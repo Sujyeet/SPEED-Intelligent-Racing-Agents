@@ -1,8 +1,8 @@
-# Krash Kart — Master Game Development Blueprint & Production Roadmap
+# RESEARCH_ML — Master Game Development Blueprint & Production Roadmap
 
 ## 1. Executive Summary & Technical Vision
 
-Krash Kart is an action arcade kart racing game built in Unity 2022.3. It combines real-time peer-to-peer multiplayer via Unity Netcode for GameObjects (NGO) and Unity Relay with autonomous AI opponents trained using Unity ML-Agents.
+RESEARCH_ML is an action arcade kart racing game built in Unity 2022.3. It combines real-time peer-to-peer multiplayer via Unity Netcode for GameObjects (NGO) and Unity Relay with autonomous AI opponents trained using Unity ML-Agents.
 
 This blueprint serves as the living production master plan for transitioning from prototype into full game production.
 

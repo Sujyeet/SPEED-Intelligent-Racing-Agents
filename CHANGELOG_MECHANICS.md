@@ -1,4 +1,4 @@
-# Krash Kart Mechanics and Code Changelog
+# RESEARCH_ML Mechanics and Code Changelog
 
 ## 1. 3-Lap Race Winning System
 
@@ -44,3 +44,11 @@
 * **Why Not Alternatives**:
   - *Alternative 1 (Leaving particles unmanaged)*: Rejected due to hierarchy bloat.
   - *Alternative 2 (Complex Object Pooling)*: Deferred until full release optimization phase to keep prototype particle lifecycle simple.
+
+## 6. Project Rebranding & Setting Renaming
+
+* **What Changed**: Renamed project settings in `ProjectSettings.asset` (`productName`, `projectName`, `metroPackageName`, `metroApplicationDescription`) and documentation/script headers from `Krash Kart` / `ML TEST` to `RESEARCH_ML`.
+* **Why**: Align overall project identity and product settings with the new official name requested (`RESEARCH_ML`).
+* **How**: Updated `ProjectSettings.asset`, `AGENTS.md`, `README.md`, `GAME_DEVELOPMENT_BLUEPRINT.md`, `PROTOTYPE_DOCUMENTATION.md`, `GIT_GUIDE.md`, `kart-git.ps1`, and `CHANGELOG_MECHANICS.md`.
+* **Why Not Alternatives**:
+  - *Alternative 1 (Partial renaming in settings only)*: Rejected because project documentation and agent instructions must reflect the exact project name for consistency.

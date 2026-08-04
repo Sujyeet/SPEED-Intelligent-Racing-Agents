@@ -1,4 +1,4 @@
-# Krash Kart — Git Version Control Guide
+# RESEARCH_ML — Git Version Control Guide
 
 ## The Short Version (Read This First)
 

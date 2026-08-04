@@ -1,4 +1,4 @@
-# Krash Kart Root Cause & Resolution Log
+# RESEARCH_ML Root Cause & Resolution Log
 
 ## 1. Single-Player Lap Trigger Ignition Failure
 
